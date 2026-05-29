@@ -1,5 +1,5 @@
 
-package lt.eif.viko.atalalaite.webservice.client;
+package lt.viko.eif.atalalaite.webserviceclient.services;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -49,7 +49,7 @@
 		<dependency>
 			<groupId>com.sun.xml.ws</groupId>
 			<artifactId>jaxws-rt</artifactId>
-			<version>4.0.0</version>
+			<version>4.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>jakarta.xml.bind</groupId>
@@ -80,9 +80,28 @@
 					<wsdlUrls>
 						<wsdlUrl>http://localhost:8090/libraryservice?wsdl</wsdlUrl>
 					</wsdlUrls>
-					<packageName>lt.eif.viko.atalalaite.webservice.client</packageName>
-					<sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
+					<packageName>lt.eif.viko.atalalaite.webserviceclient</packageName>
+					<sourceDestDir>${project.build.directory}/generated-sources/wsimport</sourceDestDir>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.5.0</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.build.directory}/generated-sources/wsimport</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

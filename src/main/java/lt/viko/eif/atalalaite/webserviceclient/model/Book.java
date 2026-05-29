@@ -1,5 +1,5 @@
 
-package lt.eif.viko.atalalaite.webservice.client;
+package lt.viko.eif.atalalaite.webserviceclient.model;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -41,15 +41,6 @@ public class Book {
     protected String author;
     protected int year;
     protected String isbn;
-    @Override
-    public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", year=" + year +
-                ", isbn='" + isbn + '\'' +
-                '}';
-    }
 
     /**
      * Gets the value of the title property.
@@ -137,6 +128,16 @@ public class Book {
      */
     public void setIsbn(String value) {
         this.isbn = value;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", year=" + year +
+                ", isbn='" + isbn + '\'' +
+                '}' + "\n";
     }
 
 }

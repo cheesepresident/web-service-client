@@ -1,5 +1,5 @@
 
-package lt.eif.viko.atalalaite.webservice.client;
+package lt.viko.eif.atalalaite.webserviceclient.model;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;

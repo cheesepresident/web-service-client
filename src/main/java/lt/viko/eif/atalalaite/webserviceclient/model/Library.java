@@ -1,5 +1,5 @@
 
-package lt.eif.viko.atalalaite.webservice.client;
+package lt.viko.eif.atalalaite.webserviceclient.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,16 +56,6 @@ public class Library {
     protected String city;
     protected boolean hasReadingRoom;
     protected Library.Books books;
-    @Override
-    public String toString() {
-        return "Library{" +
-                "name='" + name + '\'' +
-                ", location='" + location + '\'' +
-                ", city='" + city + '\'' +
-                ", hasReadingRoom=" + hasReadingRoom +
-                ", books=" + books +
-                '}';
-    }
 
     /**
      * Gets the value of the name property.
@@ -205,14 +195,7 @@ public class Library {
     })
     public static class Books {
 
-
         protected List<Book> book;
-        @Override
-        public String toString() {
-            return "Books{" +
-                    "book=" + book +
-                    '}';
-        }
 
         /**
          * Gets the value of the book property.
@@ -238,6 +221,13 @@ public class Library {
          * @return
          *     The value of the book property.
          */
+
+        @Override
+        public String toString() {
+            return "Books{" +
+                    "book=" + book +
+                    '}';
+        }
         public List<Book> getBook() {
             if (book == null) {
                 book = new ArrayList<>();
@@ -245,6 +235,16 @@ public class Library {
             return this.book;
         }
 
+    }
+    @Override
+    public String toString() {
+        return "Library{" +
+                "name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", city='" + city + '\'' +
+                ", hasReadingRoom=" + hasReadingRoom +
+                ", books=" + books +
+                '}';
     }
 
 }
